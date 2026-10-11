@@ -49,6 +49,13 @@ Reference solution entrypoint:
 python task/solution/solve.py
 ```
 
+Check that held-out fixture digests still match `restore_heldout.py`:
+
+```bash
+make verify-fixtures
+# or: python scripts/verify_fixtures.py
+```
+
 ## Verification
 
 `adjustment_set.json` is checked by required-include / forbidden-exclude set membership.
