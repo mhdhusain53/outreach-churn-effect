@@ -1,0 +1,28 @@
+[project]
+name = "outreach-churn-effect"
+version = "0.1.0"
+description = "Causal RMST estimation of retention outreach under confounding and informative censoring."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+  "numpy==2.2.6",
+  "pandas==2.2.3",
+  "scikit-learn==1.6.1",
+  "scipy==1.15.3",
+  "statsmodels==0.14.4",
+  "lifelines==0.30.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest==8.4.1",
+  "pytest-json-ctrf==0.3.5",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["task/tests"]
+python_files = ["test_*.py"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
