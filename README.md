@@ -28,6 +28,27 @@ task/
 Python 3.13 with numpy, pandas, scikit-learn, scipy, statsmodels, and lifelines. Five CSVs
 and a data dictionary are copied into `/app/data`.
 
+Pinned packages live in `requirements.txt` (same versions as the Docker image).
+
+## Quick start
+
+```bash
+# Build the analysis image
+docker build -t outreach-churn-effect task/environment
+
+# Or install deps locally (Python 3.13 recommended)
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Reference solution entrypoint:
+
+```bash
+# Inside the container (or with data available under /app/data)
+python task/solution/solve.py
+```
+
 ## Verification
 
 `adjustment_set.json` is checked by required-include / forbidden-exclude set membership.
