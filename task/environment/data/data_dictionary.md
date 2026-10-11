@@ -66,3 +66,5 @@ fit on plan_tier, monthly_spend_usd, and login_freq_pre30d plus the day-0 outrea
 assignment only, leaving tenure_days_pre out of that particular fit; ticket count is
 standardized once per retained customer (one value per customer_id you keep, by its
 mean and standard deviation across those customers), not per person-day row.
+
+See instruction.md for modeling conventions used by the graded outputs.
